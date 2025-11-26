@@ -184,7 +184,7 @@ export function App() {
         }} whileTap={{
           scale: 0.95
         }} className="bg-gray-900 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors shadow-lg">
-            Book a Consultation
+            Follow on LinkedIn
           </motion.button>
         </header>
 
