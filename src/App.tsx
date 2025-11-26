@@ -189,7 +189,7 @@ export function App() {
             rel="noopener noreferrer"
       >
             Follow on LinkedIn
-          </motion.button>
+          </motion.a>
         </header>
 
         {/* Hero Section */}
