@@ -1,5 +1,22 @@
 import './index.css';
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { App } from "./App";
-render(<App />, document.getElementById("root"));
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsOfService } from "./pages/TermsOfService";
+
+const container = document.getElementById("root");
+const root = createRoot(container!);
+
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
