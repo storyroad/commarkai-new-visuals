@@ -171,7 +171,7 @@ export function App() {
             <Bot className="w-10 h-10 text-gray-900" />
             <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
           </motion.div>
-          <motion.button initial={{
+          <motion.a initial={{
           opacity: 0,
           x: 20
         }} animate={{
@@ -184,6 +184,10 @@ export function App() {
         }} whileTap={{
           scale: 0.95
         }} className="bg-gray-900 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors shadow-lg">
+            href="https://www.linkedin.com/company/commarkai/"
+            target="blank"
+            rel="noopener noreferrer"
+      >
             Follow on LinkedIn
           </motion.button>
         </header>
