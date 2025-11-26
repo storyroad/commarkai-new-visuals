@@ -18,8 +18,8 @@ import { Bot, Zap, TrendingUp, Facebook, MessageCircle, Send, Calendar, Mail, Ph
      const PRIVACY_URL = 'https://commarkai-lead-magnet-flow.netlify.app/privacy-policy'
      const TERMS_URL   = 'https://commarkai-lead-magnet-flow.netlify.app/terms-of-service'
 */
-const PRIVACY_URL = '/privacy-policy';
-const TERMS_URL = '/terms-of-service';
+const PRIVACY_URL = 'https://commarkai-lead-magnet-flow.netlify.app/privacy-policy';
+const TERMS_URL = 'https://commarkai-lead-magnet-flow.netlify.app/terms-of-service';
 
 const footerData = {
   legal: {
