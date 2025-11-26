@@ -1,0 +1,24 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+:root {
+  --cream-bg: #f5f3f0;
+  --powder-blue: #a8c5dd;
+  --soft-blue: #b8d4e8;
+  --lavender: #c4b5d6;
+  --burgundy: #8b5a6f;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--cream-bg);
+}
