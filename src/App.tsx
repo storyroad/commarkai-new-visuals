@@ -146,10 +146,13 @@ export function App() {
       {/* Floating Background Text */}
       <div className="fixed inset-0 z-0">
         <FloatingText text="AI AGENTS • AUTOMATION • SCALE •" delay={0} duration={25} direction="left" />
+      </div>
+      <div className="fixed inset-0 z-0">
         <FloatingText text="LEAD GENERATION • CONVERSIONS •" delay={2} duration={30} direction="right" />
+      </div>
+      <div className="fixed inset-0 z-0">
         <FloatingText text="24/7 WORKFLOW • INTELLIGENT •" delay={4} duration={28} direction="left" />
       </div>
-
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
