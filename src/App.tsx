@@ -144,15 +144,17 @@ export function App() {
       </div>
 
       {/* Floating Background Text */}
-      <div className="fixed inset-0 z-0">
-        <FloatingText text="AI AGENTS • AUTOMATION • SCALE •" delay={0} duration={25} direction="left" />
-      </div>
-      <div className="fixed inset-0 z-1">
+      <div className="fixed top-0 left-0 w-full z-0 flex flex-col pointer-events-none">
+       <div className="relative w-full h-[88px] md:h-[96px]">
+         <FloatingText text="AI AGENTS • AUTOMATION • SCALE •" delay={0} duration={25} direction="left" />
+       </div>
+       <div className="relative w-full h-[88px] md:h-[96px]">
         <FloatingText text="LEAD GENERATION • CONVERSIONS •" delay={2} duration={30} direction="right" />
       </div>
-      <div className="fixed inset-0 z-2">
-        <FloatingText text="24/7 WORKFLOW • INTELLIGENT •" delay={4} duration={28} direction="left" />
-      </div>
+      <div className="relative w-full h-[88px] md:h-[96px]">
+         <FloatingText text="24/7 WORKFLOW • INTELLIGENT •" delay={4} duration={28} direction="left" />
+     </div>
+    </div>
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
