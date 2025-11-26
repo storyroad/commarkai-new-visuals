@@ -146,7 +146,7 @@ export function App() {
       {/* Floating Background Text */}
       <div className="fixed top-0 left-0 w-full z-0 flex flex-col pointer-events-none">
        <div className="relative w-full h-[88px] md:h-[96px]">
-         <FloatingText text="AI AGENTS • AUTOMATION • SCALE •" delay={0} duration={25} direction="left" />
+         <FloatingText text="AI AGENTS • AUTOMATION • SCALING •" delay={0} duration={25} direction="left" />
        </div>
        <div className="relative w-full h-[88px] md:h-[96px]">
         <FloatingText text="LEAD GENERATION • CONVERSIONS •" delay={2} duration={30} direction="right" />
@@ -567,7 +567,7 @@ export function App() {
             {/* Bottom Bar */}
             <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-600 text-sm">
-                © 2024 CommarkAI. All rights reserved.
+                © 2025 CommarkAI. All rights reserved.
               </p>
               <div className="flex gap-6">
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
