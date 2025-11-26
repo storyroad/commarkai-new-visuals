@@ -1,10 +1,10 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bot, Facebook, MessageCircle, Send } from 'lucide-react';
 
 /**
  * Reusable Footer component used across pages.
- * Uses react-router Link for internal pages (privacy & terms).
+ * Mirrors the footer previously inline in App.tsx so it can be reused in /privacy-policy and /terms-of-service pages.
  */
 export default function Footer() {
   return (
@@ -65,8 +65,15 @@ export default function Footer() {
 
         {/* Bottom Bar with links */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} CommarkAI. All rights reserved.
+          <div className="text-gray-600 text-sm flex items-center gap-4">
+            <span>© {new Date().getFullYear()} CommarkAI. All rights reserved.</span>
+
+            {/* Small inline links included so footer is identical across pages */}
+            <span className="hidden sm:inline-flex items-center gap-2">
+              <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
+              <span className="text-gray-400">|</span>
+              <Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900">Terms of Service</Link>
+            </span>
           </div>
 
           <div className="flex gap-6">
