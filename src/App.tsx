@@ -578,23 +578,6 @@ export function App() {
             <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-600 text-sm">
                 © 2025 CommarkAI. All rights reserved.
-            <a
-              href={footerData.legal?.privacy || "/privacy-policy"}
-              target={footerData.legal?.privacy?.startsWith("http") ? "_blank" : undefined}
-              rel={footerData.legal?.privacy?.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </a>
-            {" | "}
-            <a
-              href={footerData.legal?.terms || "/terms-of-service"}
-              target={footerData.legal?.terms?.startsWith("http") ? "_blank" : undefined}
-              rel={footerData.legal?.terms?.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="hover:text-white transition-colors"
-            >
-              Terms of Service
-            </a>
               </p>
               <div className="flex gap-6">
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
