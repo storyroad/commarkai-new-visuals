@@ -1,13 +1,12 @@
-import './index.css';
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { App } from "./App";
-import { PrivacyPolicy } from "./pages/PrivacyPolicy";
-import { TermsOfService } from "./pages/TermsOfService";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { App } from './App';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
-const container = document.getElementById("root");
-const root = createRoot(container!);
+const rootElement = document.getElementById('root')!;
+const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
