@@ -147,7 +147,6 @@ export function App() {
         <FloatingShape delay={2} size="md" position={{ top: '30%', right: '10%' }} />
         <FloatingShape delay={4} size="sm" position={{ bottom: '20%', left: '15%' }} />
         <FloatingShape delay={1} size="md" position={{ bottom: '10%', right: '20%' }} />
-
         {/* Burgundy accent shape */}
         <motion.div
           className="absolute w-56 h-56 bg-gradient-to-br from-rose-300 to-purple-300 rounded-full opacity-30 blur-2xl"
@@ -167,7 +166,7 @@ export function App() {
         />
       </div>
 
-      {/* Floating Background Text - UPDATED: each FloatingText is stacked on its own line */}
+      {/* Floating Background Text - stacked lines */}
       <div className="fixed top-0 left-0 w-full z-0 flex flex-col pointer-events-none">
         <div className="relative w-full h-[88px] md:h-[96px]">
           <FloatingText
@@ -197,5 +196,8 @@ export function App() {
 
       {/* Content */}
       <div className="relative z-10">
-        {/* ...the rest of your file remains unchanged... */}
-        {/* [No changes below this line] */}
+        {/* ...everything else in your App component remains unchanged! (Header, Sections, Footer, and all closing tags) */}
+      </div>
+    </div>
+  );
+}
