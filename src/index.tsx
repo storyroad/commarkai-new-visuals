@@ -1,11 +1,13 @@
-﻿import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { App } from './App';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
+import "./index.css";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { App } from "./App";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Footer from "./components/Footer";
 
-const rootElement = document.getElementById('root')!;
+const rootElement = document.getElementById("root")!;
 const root = createRoot(rootElement);
 
 root.render(
@@ -16,6 +18,8 @@ root.render(
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
