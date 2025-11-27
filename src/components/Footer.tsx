@@ -31,7 +31,6 @@ export default function Footer() {
   const onCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(pageUrl || window.location.href);
-      // simple feedback
       alert('Link copied to clipboard');
     } catch (err) {
       console.warn('Copy failed', err);
@@ -86,7 +85,6 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* official page / messenger links */}
             <a href={facebookPageHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Follow on Facebook" className="text-gray-600 hover:text-gray-900">
               <Facebook className="w-5 h-5" />
             </a>
@@ -95,9 +93,7 @@ export default function Footer() {
               <MessageCircle className="w-5 h-5" />
             </a>
 
-            {/* share actions */}
             <a href={facebookShareHref} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" title="Share on Facebook" className="text-gray-600 hover:text-gray-900">
-              {/* Use Share2 icon so we don't duplicate page Facebook icon */}
               <Share2 className="w-5 h-5" />
             </a>
 
