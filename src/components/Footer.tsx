@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bot, Facebook, MessageCircle, Send } from 'lucide-react';
 
@@ -92,3 +92,4 @@ export default function Footer() {
     </footer>
   );
 }
+
