@@ -93,10 +93,6 @@ export default function Footer() {
               <MessageCircle className="w-5 h-5" />
             </a>
 
-            <a href={facebookShareHref} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" title="Share on Facebook" className="text-gray-600 hover:text-gray-900">
-              <Share2 className="w-5 h-5" />
-            </a>
-
             <a href={telegramShareHref} target="_blank" rel="noopener noreferrer" aria-label="Share on Telegram" title="Share on Telegram" className="text-gray-600 hover:text-gray-900">
               <Send className="w-5 h-5" />
             </a>
@@ -105,9 +101,6 @@ export default function Footer() {
               <Mail className="w-5 h-5" />
             </a>
 
-            <button onClick={onCopyLink} aria-label="Copy link" title="Copy link" type="button" className="text-gray-600 hover:text-gray-900">
-              <Copy className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>
