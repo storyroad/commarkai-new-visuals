@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -153,15 +153,8 @@ export default function TermsOfService() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white/50 mt-16">
-        <div className="container mx-auto px-6 py-8 text-center">
-          <p className="text-gray-600 text-sm">
-            {new Date().getFullYear()} CommarkAI. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      
     </div>
   );
 }
-
 
