@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Bot, Facebook, MessageCircle, Send, Copy, Mail } from 'lucide-react';
 
 /**
- * Reusable Footer component used across pages.
- * Adds share buttons that open social share URLs for the current page,
- * plus direct links to the CommarkAI Facebook page and Messenger.
+ * Footer with robust share links:
+ * - External anchors for Facebook page and Messenger
+ * - Share anchors for Facebook/Telegram/Email that include the current page URL
+ * - Copy link button uses the Clipboard API with a simple alert fallback
  */
 export default function Footer() {
   const location = useLocation();
+
+  // Build absolute page URL (safe on client)
   const origin =
     typeof window !== 'undefined' && window.location && window.location.origin
       ? window.location.origin
@@ -17,37 +20,27 @@ export default function Footer() {
   const pageUrl = `${origin}${currentPath}`;
   const pageTitle = (typeof document !== 'undefined' && document.title) || 'CommarkAI';
 
-  const openWindow = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer,width=900,height=600');
-  };
-
-  const onShareFacebook = () => {
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-    openWindow(shareUrl);
-  };
-
-  const onShareTelegram = () => {
-    const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(
+  // Precompute share hrefs so anchors are usable without relying on JS-only handlers
+  const { facebookShareHref, telegramShareHref, mailtoHref } = useMemo(() => {
+    const facebookShareHref = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    const telegramShareHref = `https://t.me/share/url?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(
       pageTitle
     )}`;
-    openWindow(shareUrl);
-  };
-
-  const onShareEmail = () => {
-    const subject = encodeURIComponent(pageTitle);
-    const body = encodeURIComponent(`${pageTitle}\n\n${pageUrl}`);
-    // Use window.location.href so the mail client opens in the user's mail app/tab
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
-  };
+    const mailtoHref = `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(
+      `${pageTitle}\n\n${pageUrl}`
+    )}`;
+    return { facebookShareHref, telegramShareHref, mailtoHref };
+  }, [pageUrl, pageTitle]);
 
   const onCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(pageUrl);
-      // lightweight feedback — replace with a toast if available
+      // lightweight feedback — replace with a toast if you have one
       alert('Link copied to clipboard');
     } catch (err) {
       console.warn('Copy failed, opening page instead', err);
-      openWindow(pageUrl);
+      // fallback: open page in new tab
+      window.open(pageUrl, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -111,6 +104,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-600 text-sm flex items-center gap-4">
             <span>© {new Date().getFullYear()} CommarkAI. All rights reserved.</span>
+
             <span className="hidden sm:inline-flex items-center gap-2">
               <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
               <span className="text-gray-400">|</span>
@@ -119,7 +113,7 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Official Facebook page */}
+            {/* Official Facebook page (external anchor) */}
             <a
               href="https://www.facebook.com/commarkai/"
               target="_blank"
@@ -131,7 +125,7 @@ export default function Footer() {
               <Facebook className="w-5 h-5" />
             </a>
 
-            {/* Messenger to the page (direct message) */}
+            {/* Messenger to the page (external anchor) */}
             <a
               href="https://m.me/commarkai"
               target="_blank"
@@ -143,40 +137,41 @@ export default function Footer() {
               <MessageCircle className="w-5 h-5" />
             </a>
 
-            {/* Share to Facebook (shares current page) */}
-            <button
-              onClick={onShareFacebook}
+            {/* Share to Facebook (href contains absolute page URL) */}
+            <a
+              href={facebookShareHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Share on Facebook"
               title="Share on Facebook"
-              type="button"
             >
               <Facebook className="w-5 h-5" />
-            </button>
+            </a>
 
             {/* Share to Telegram */}
-            <button
-              onClick={onShareTelegram}
+            <a
+              href={telegramShareHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Share on Telegram"
               title="Share on Telegram"
-              type="button"
             >
               <Send className="w-5 h-5" />
-            </button>
+            </a>
 
-            {/* Share by Email */}
-            <button
-              onClick={onShareEmail}
+            {/* Share by Email (mailto link) */}
+            <a
+              href={mailtoHref}
               className="text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Share by Email"
               title="Share by Email"
-              type="button"
             >
               <Mail className="w-5 h-5" />
-            </button>
+            </a>
 
-            {/* Copy link */}
+            {/* Copy link (still a button) */}
             <button
               onClick={onCopyLink}
               className="text-gray-600 hover:text-gray-900 transition-colors"
