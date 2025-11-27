@@ -1,32 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Zap, TrendingUp, Facebook, MessageCircle, Send, Calendar, Mail, Phone, MapPin } from 'lucide-react';
-
-/**
- * Quick note:
- * - This file adds a Footer component (near the bottom) that includes the
- *   Privacy Policy and Terms of Service links you provided.
- * - By default the links point to relative paths:
- *     /privacy-policy
- *     /terms-of-service
- *   If you want them to point to the pages in the other project (commarkai-lead-magnet-flow),
- *   change the constants PRIVACY_URL and TERMS_URL below to the full external URLs.
- */
-
-/* Configure these to point to the other project's deployed pages if needed.
-   Example external URL (if the other project is deployed):
-     const PRIVACY_URL = 'https://commarkai-lead-magnet-flow.netlify.app/privacy-policy'
-     const TERMS_URL   = 'https://commarkai-lead-magnet-flow.netlify.app/terms-of-service'
-*/
-const PRIVACY_URL = 'https://commarkai-lead-magnet-flow.netlify.app/privacy-policy';
-const TERMS_URL = 'https://commarkai-lead-magnet-flow.netlify.app/terms-of-service';
-
-const footerData = {
-  legal: {
-    privacy: PRIVACY_URL,
-    terms: TERMS_URL
-  }
-};
+import { Link } from 'react-router-dom';
 
 const FloatingText = ({
   text,
@@ -164,14 +139,8 @@ const PlatformIcon = ({
   );
 };
 
-/* New Footer component (uses the provided anchor behavior) */
+/* Footer links component with internal routing */
 const FooterLinks = () => {
-  const privacyHref = footerData.legal?.privacy || '/privacy-policy';
-  const termsHref = footerData.legal?.terms || '/terms-of-service';
-
-  const privacyIsExternal = privacyHref.startsWith('http');
-  const termsIsExternal = termsHref.startsWith('http');
-
   return (
     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div className="text-gray-600 text-sm">
@@ -179,23 +148,19 @@ const FooterLinks = () => {
       </div>
 
       <div className="text-gray-600 text-sm">
-        <a
-          href={privacyHref}
-          target={privacyIsExternal ? '_blank' : undefined}
-          rel={privacyIsExternal ? 'noopener noreferrer' : undefined}
+        <Link
+          to="/privacy-policy"
           className="hover:text-gray-900 transition-colors"
         >
           Privacy Policy
-        </a>
+        </Link>
         {' | '}
-        <a
-          href={termsHref}
-          target={termsIsExternal ? '_blank' : undefined}
-          rel={termsIsExternal ? 'noopener noreferrer' : undefined}
+        <Link
+          to="/terms-of-service"
           className="hover:text-gray-900 transition-colors"
         >
           Terms of Service
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -716,7 +681,7 @@ export function App() {
                   <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About Us</a></li>
                   <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Case Studies</a></li>
                   <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</a></li>
-                  <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy Policy</a></li>
+                  <li><Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>
