@@ -548,68 +548,23 @@ export function App() {
                 delay: 0.2
               }}
             >
-              <form className="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-300 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-300 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-900 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-300 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                    placeholder="+1 (555) 000-0000"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-300 focus:ring-2 focus:ring-blue-100 outline-none transition-all resize-none"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-                <motion.button
-                  type="submit"
-                  whileHover={{
-                    scale: 1.02
-                  }}
-                  whileTap={{
-                    scale: 0.98
-                  }}
-                  className="w-full bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors shadow-lg"
-                >
-                  Send Message
-                </motion.button>
-              </form>
+              <iframe
+                src="https://links.commarkai.com/widget/form/w4K5jbWUIlgkQ43xexnZ"
+                style={{display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '30px'}}
+                id="polite-slide-in-right-w4K5jbWUIlgkQ43xexnZ"
+                data-layout='{"id":"POLITE_SLIDE_IN","minimizedTitle":"","isLeftAligned":false,"isRightAligned":true,"allowMinimize":false}'
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Website Contact Infor Form"
+                data-height="496"
+                data-layout-iframe-id="polite-slide-in-right-w4K5jbWUIlgkQ43xexnZ"
+                data-form-id="w4K5jbWUIlgkQ43xexnZ"
+                title="Website Contact Infor Form"
+              />
             </motion.div>
           </motion.div>
         </section>
