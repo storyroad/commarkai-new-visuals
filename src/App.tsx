@@ -552,9 +552,7 @@ export function App() {
                 src="https://links.commarkai.com/widget/form/w4K5jbWUIlgkQ43xexnZ"
                 style={{width: '100%', height: '600px', border: 'none', borderRadius: '30px'}}
                 id="inline-form-w4K5jbWUIlgkQ43xexnZ"
-                data-form-name="Website Contact Infor Form"
                 data-form-id="w4K5jbWUIlgkQ43xexnZ"
-                title="Website Contact Infor Form"
               />
             </motion.div>
           </motion.div>
