@@ -550,18 +550,9 @@ export function App() {
             >
               <iframe
                 src="https://links.commarkai.com/widget/form/w4K5jbWUIlgkQ43xexnZ"
-                style={{display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '30px'}}
-                id="polite-slide-in-right-w4K5jbWUIlgkQ43xexnZ"
-                data-layout='{"id":"POLITE_SLIDE_IN","minimizedTitle":"","isLeftAligned":false,"isRightAligned":true,"allowMinimize":false}'
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
+                style={{width: '100%', height: '600px', border: 'none', borderRadius: '30px'}}
+                id="inline-form-w4K5jbWUIlgkQ43xexnZ"
                 data-form-name="Website Contact Infor Form"
-                data-height="496"
-                data-layout-iframe-id="polite-slide-in-right-w4K5jbWUIlgkQ43xexnZ"
                 data-form-id="w4K5jbWUIlgkQ43xexnZ"
                 title="Website Contact Infor Form"
               />
