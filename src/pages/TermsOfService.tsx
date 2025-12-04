@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ export default function TermsOfService() {
           
           <div className="prose prose-lg max-w-none text-gray-700 space-y-8">
             <p className="text-xl text-gray-600">
-              Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' , year: 'numeric' })}
+              Last updated: December 4, 2025
             </p>
 
             <section className="space-y-4">
@@ -144,8 +144,11 @@ export default function TermsOfService() {
             <section className="space-y-4">
               <h2 className="text-2xl font-bold text-gray-900">11. Contact Information</h2>
               <p>
-                If you have any questions about these Terms of Service, please contact us through our website 
-                contact form or reach out via our social media channels.
+                If you have any questions about these Terms of Service, please contact us via email at{' '}
+                <a href="mailto:support@commarkai.info" className="text-indigo-600 hover:underline">
+                  support@commarkai.info
+                </a>
+                , or through our website contact form.
               </p>
             </section>
           </div>
@@ -157,6 +160,3 @@ export default function TermsOfService() {
     </div>
   );
 }
-
-
-
