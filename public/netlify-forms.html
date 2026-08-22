@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Netlify Forms helper</title></head>
+<body>
+  <!-- Hidden form that Netlify will parse at deploy time.
+       Keeps the visible React form as-is, but ensures Netlify detects "contact".
+       Note: Netlify skips form (re)detection on a deploy whose build output is
+       byte-identical to the previous deploy ("0 new files to upload" in the
+       build log) - an empty/no-op commit will NOT trigger detection even if
+       the site-wide toggle was just turned on. -->
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" style="display:none">
+    <input type="hidden" name="form-name" value="contact" />
+    <p style="display:none">
+      <label>Don't fill this out if human: <input name="bot-field" /></label>
+    </p>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

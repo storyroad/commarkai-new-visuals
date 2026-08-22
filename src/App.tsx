@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Zap, TrendingUp, Facebook, MessageCircle, Send, Calendar, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -140,6 +140,27 @@ const PlatformIcon = ({
 };
 
 export function App() {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      const form = e.currentTarget;
+      const body = new FormData(form);
+      // POST to the site root so Netlify captures the form.
+      await fetch(form.action || '/', { method: 'POST', body });
+      window.location.href = '/thank-you.html';
+    } catch (err) {
+      // On failure, still send the user to the thank-you page and log for debugging.
+      console.error('Contact form submit failed', err);
+      window.location.href = '/thank-you.html';
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-[#f5f3f0] relative overflow-hidden">
       {/* Floating Background Shapes */}
@@ -536,10 +557,18 @@ export function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              action="https://your-backend-url/api/contact" // Replace with valid endpoint
+              name="contact"
               method="POST"
+              action="/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleContactSubmit}
               className="bg-white rounded-3xl shadow-md px-8 py-12"
             >
+              <input type="hidden" name="form-name" value="contact" />
+              <p style={{ display: 'none' }}>
+                <label>Don't fill this out if human: <input name="bot-field" /></label>
+              </p>
               <div className="flex flex-col mb-4">
                 <label htmlFor="name" className="text-gray-700 font-semibold mb-2">Name *</label>
                 <input type="text" id="name" name="name" required className="border border-gray-300 rounded-lg px-4 py-2" />
@@ -552,7 +581,9 @@ export function App() {
                 <label htmlFor="message" className="text-gray-700 font-semibold mb-2">Message *</label>
                 <textarea id="message" name="message" rows={5} required className="border border-gray-300 rounded-lg px-4 py-2"></textarea>
               </div>
-              <button type="submit" className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">Submit</button>
+              <button type="submit" disabled={submitting} className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors disabled:opacity-60">
+                {submitting ? 'Sending…' : 'Submit'}
+              </button>
             </motion.form>
           </motion.div>
         </section>
