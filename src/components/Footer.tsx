@@ -55,19 +55,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Lead Generation</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Automated Follow-ups</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Conversion Optimization</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Workflow Integration</a></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Lead Generation</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Automated Follow-ups</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Conversion Optimization</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Workflow Integration</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Case Studies</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Contact</a></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-gray-900">About Us</Link></li>
+              <li><Link to="/case-studies" className="text-gray-600 hover:text-gray-900">Case Studies</Link></li>
+              <li><Link to="/" className="text-gray-600 hover:text-gray-900">Contact</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900">Terms of Service</Link></li>
             </ul>
