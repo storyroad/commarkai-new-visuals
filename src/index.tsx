@@ -12,12 +12,16 @@ import Footer from './components/Footer';
 
 // React Router doesn't reset scroll position on navigation by default, so
 // clicking a link from partway down one page previously landed you at the
-// same scroll height on the next page instead of the top.
+// same scroll height on the next page instead of the top. Keyed on
+// location.key (unique per navigation) rather than pathname, since several
+// footer links point at the same URL (e.g. all four Services links go to
+// /services) - pathname alone wouldn't change for those, so the effect
+// would never re-fire.
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { key } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [key]);
   return null;
 }
 

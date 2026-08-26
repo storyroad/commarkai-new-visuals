@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, ArrowLeft, Target, Wrench, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Target, Wrench, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Logo } from '../components/Logo';
 
 const CaseStudy = ({
   eyebrow,
@@ -66,7 +67,7 @@ export default function CaseStudies() {
     <div className="w-full min-h-screen bg-[#f5f3f0]">
       <header className="container mx-auto px-6 py-8 flex justify-between items-center border-b border-gray-200">
         <Link to="/" className="flex items-center gap-3">
-          <Bot className="w-10 h-10 text-gray-900" />
+          <Logo className="w-10 h-10" />
           <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
         </Link>
         <Link
