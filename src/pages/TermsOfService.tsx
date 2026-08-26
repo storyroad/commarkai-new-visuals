@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Logo } from '../components/Logo';
 
 export default function TermsOfService() {
   return (
@@ -9,7 +10,7 @@ export default function TermsOfService() {
       {/* Header */}
       <header className="container mx-auto px-6 py-8 flex justify-between items-center border-b border-gray-200">
         <Link to="/" className="flex items-center gap-3">
-          <Bot className="w-10 h-10 text-gray-900" />
+          <Logo className="w-10 h-10" />
           <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
         </Link>
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Bot, Facebook, MessageCircle, Share2, Send, Copy, Mail } from 'lucide-react';
+import { Facebook, MessageCircle, Share2, Send, Copy, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 /**
  * Footer with anchors for robust behavior:
@@ -44,7 +45,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Bot className="w-8 h-8 text-gray-900" />
+              <Logo className="w-8 h-8" />
               <span className="text-2xl font-black text-gray-900">COMMARKAI</span>
             </div>
             <p className="text-gray-600 mb-4 max-w-md">
@@ -55,19 +56,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Lead Generation</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Automated Follow-ups</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Conversion Optimization</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Workflow Integration</a></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Lead Generation</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Automated Follow-ups</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Conversion Optimization</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Workflow Integration</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Case Studies</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Contact</a></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-gray-900">About Us</Link></li>
+              <li><Link to="/case-studies" className="text-gray-600 hover:text-gray-900">Case Studies</Link></li>
+              <li><Link to="/" className="text-gray-600 hover:text-gray-900">Contact</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="text-gray-600 hover:text-gray-900">Terms of Service</Link></li>
             </ul>

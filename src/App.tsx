@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Zap, TrendingUp, Facebook, MessageCircle, Send, Calendar, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Logo } from './components/Logo';
 
 const FloatingText = ({
   text,
@@ -220,7 +221,7 @@ export function App() {
             }}
             className="flex items-center gap-3"
           >
-            <Bot className="w-10 h-10 text-gray-900" />
+            <Logo className="w-10 h-10" />
             <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
           </motion.div>
 
