@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: letter; margin: 0.75in; }
+  body { font-family: 'Helvetica', Arial, sans-serif; color: #27272a; font-size: 11pt; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #6b21a8; padding-bottom: 16px; margin-bottom: 24px; }
+  .brand { font-size: 22pt; font-weight: 700; color: #6b21a8; letter-spacing: 0.5px; }
+  .brand-sub { font-size: 9pt; color: #71717a; margin-top: 2px; }
+  .invoice-meta { text-align: right; font-size: 10pt; color: #52525b; }
+  .invoice-meta .inv-number { font-size: 13pt; font-weight: 700; color: #27272a; }
+  .parties { display: flex; justify-content: space-between; margin-bottom: 28px; }
+  .party h4 { margin: 0 0 4px 0; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.5px; color: #a1a1aa; }
+  .party p { margin: 0; font-size: 10.5pt; line-height: 1.5; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+  th { background: #f4f4f5; color: #52525b; text-align: left; padding: 8px 10px; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 2px solid #e4e4e7; }
+  td { padding: 9px 10px; border-bottom: 1px solid #e4e4e7; font-size: 10.5pt; }
+  .amt { text-align: right; }
+  .totals { width: 280px; margin-left: auto; margin-top: 12px; }
+  .totals table { margin: 0; }
+  .totals td { border: none; padding: 4px 10px; }
+  .totals .total-row td { font-weight: 700; font-size: 13pt; color: #6b21a8; border-top: 2px solid #6b21a8; padding-top: 10px; }
+  .notes { margin-top: 28px; padding: 14px 16px; background: #faf5ff; border-left: 3px solid #6b21a8; font-size: 9.5pt; color: #52525b; }
+  .footer { margin-top: 32px; text-align: center; font-size: 9pt; color: #a1a1aa; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="brand">COMMARKAI</div>
+    <div class="brand-sub">AI Automation &amp; Business Systems</div>
+  </div>
+  <div class="invoice-meta">
+    <div class="inv-number">{{ invoice_number }}</div>
+    <div>Issued: {{ issue_date }}</div>
+    <div>Due: {{ due_date }}</div>
+  </div>
+</div>
+
+<div class="parties">
+  <div class="party">
+    <h4>From</h4>
+    <p>{{ from_name }}<br>{{ from_address }}<br>{{ from_email }}</p>
+  </div>
+  <div class="party">
+    <h4>Bill To</h4>
+    <p>{{ client_name }}<br>{{ client_address }}<br>{{ client_email }}</p>
+  </div>
+</div>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th class="amt">Qty</th>
+    <th class="amt">Rate</th>
+    <th class="amt">Amount</th>
+  </tr>
+  {% for item in items %}
+  <tr>
+    <td>{{ item.description }}</td>
+    <td class="amt">{{ item.quantity }}</td>
+    <td class="amt">${{ "%.2f"|format(item.rate) }}</td>
+    <td class="amt">${{ "%.2f"|format(item.quantity * item.rate) }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<div class="totals">
+  <table>
+    <tr><td>Subtotal</td><td class="amt">${{ "%.2f"|format(subtotal) }} CAD</td></tr>
+    {% if hst_rate %}
+    <tr><td>HST ({{ (hst_rate * 100)|round(0, 'floor')|int }}%)</td><td class="amt">${{ "%.2f"|format(hst_amount) }} CAD</td></tr>
+    {% endif %}
+    <tr class="total-row"><td>Total Due</td><td class="amt">${{ "%.2f"|format(total) }} CAD</td></tr>
+  </table>
+</div>
+
+<div class="notes">
+  <strong>Payment Terms:</strong> {{ payment_terms }}{% if hst_number %}<br><strong>HST Registration:</strong> {{ hst_number }}{% endif %}{% if notes %}<br>{{ notes }}{% endif %}
+</div>
+
+<div class="footer">Thank you for working with COMMARKAI.</div>
+
+</body>
+</html>
