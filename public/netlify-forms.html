@@ -18,5 +18,16 @@
     <textarea name="message"></textarea>
     <button type="submit">Send</button>
   </form>
+
+  <!-- Second hidden form so Netlify also detects "unsubscribe" at build time.
+       Real, visible version of this form lives at public/unsubscribe.html. -->
+  <form name="unsubscribe" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" style="display:none">
+    <input type="hidden" name="form-name" value="unsubscribe" />
+    <p style="display:none">
+      <label>Don't fill this out if human: <input name="bot-field" /></label>
+    </p>
+    <input type="email" name="email" />
+    <button type="submit">Unsubscribe</button>
+  </form>
 </body>
 </html>
