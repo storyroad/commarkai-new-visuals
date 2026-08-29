@@ -38,11 +38,14 @@ Claude reads this before any work for COMMARKAI.
 
 ## 3. Our prices
 
-- Published floor: about $2,500 per build plus $250 per month
-  maintenance.
-- Above the floor, value based pricing at roughly 10 to 30 percent of
-  client value.
-- Never quote below the build floor without Ketsia's explicit yes.
+- Typical build: about $2,500 plus $250 per month maintenance.
+- Hard floor for a build or setup: $1,500, and only for a genuinely
+  simple setup. Never quote below this without Ketsia's explicit yes.
+- Paid consult, company: $500 minimum.
+- Paid consult, sole proprietor or solo operator: $250 for a 30 minute
+  conversation. Advice only, no deliverable.
+- Above the typical build, value based pricing at roughly 10 to 30
+  percent of client value.
 - Never compete on price. Compete on the outcome.
 
 ## 4. Our proof

@@ -71,3 +71,11 @@ Use the `sop-builder` skill.
 
 - iPostal1 identity and business verification, so mail to the compliance
   address forwards.
+- Build the HubSpot deal pipeline and name its stages. The inbound lead
+  SOP is blocked on this for its CRM step.
+- Build the HubSpot to Brevo sync for contacts created by hand (HubSpot
+  native Brevo integration, or a Make.com scenario on new HubSpot
+  contacts). Today only form leads reach Brevo automatically.
+- Get the COMMARKAI Calendly booking link and put it in the inbound lead
+  SOP and its templates.
+- Decide and record the standard email sign-off used on lead replies.

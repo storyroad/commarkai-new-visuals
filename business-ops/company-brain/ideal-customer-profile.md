@@ -102,8 +102,12 @@ below as a secondary vertical, not a primary target.
 - **Deal size sweet spot:** $2,500 to $6,000 for the build, plus $250 to
   $750 a month depending on scope. Value-based pricing at 10 to 30
   percent of the value created applies above the base for bigger outcomes.
-- **Minimum viable deal:** the $2,500 build floor. Never below without
+- **Build floor:** $1,500, simple setups only. Never below without
   Ketsia's explicit yes (rulebook section 3).
+- **Below the build floor:** offer a paid consult instead, $500 for a
+  company or $250 for a 30 minute call with a sole proprietor. Advice
+  only, no deliverable. This keeps a good-fit but small lead warm
+  without discounting a build.
 - **Tech spend today:** most fit clients spend a few hundred dollars a
   month across scattered subscriptions and do not track it. Part of the
   pitch is consolidating that.
