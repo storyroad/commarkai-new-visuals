@@ -136,14 +136,11 @@ Starting points only. Ketsia writes the final wording.
 
 Placeholders used below:
 - `[link]` is the COMMARKAI discovery-call booking link:
-  `https://calendly.com/commarkai-support/30min`. Note: as of 2026-08-29
-  that Calendly account is dormant and the page shows "currently
-  unavailable". Do not send this link until the account is reactivated
-  (see open items). The event ("Business Discovery Call", 30 min) is
-  already set up and branded.
+  **`https://calendly.com/commarkai-support/30min`**. Live as of
+  2026-08-29. Event: "Business Discovery Call", 30 min, branded.
 - `[sign-off]` is the closing line and name at the bottom of the email.
-  Working default: "Ketsia, COMMARKAI". The rulebook keeps the body in
-  "we" and "our" team voice even though one person signs it.
+  Standard: **"Ketsia, COMMARKAI"**. The rulebook keeps the body in "we"
+  and "our" team voice even though one person signs it.
 
 **Discovery-call reply**
 > Hi [Name],
@@ -153,10 +150,10 @@ Placeholders used below:
 >
 > The best next step is a short call so we can understand what you are
 > working toward and whether we are the right fit. Here is our calendar:
-> [link]. Pick any time that works.
+> https://calendly.com/commarkai-support/30min. Pick any time that works.
 >
 > Talk soon,
-> [sign-off]
+> Ketsia, COMMARKAI
 
 **Paid-consult reply** (fit, but under the build floor)
 > Hi [Name],
@@ -172,7 +169,7 @@ Placeholders used below:
 >
 > Let me know if that is useful and we will send a link to book.
 >
-> [sign-off]
+> Ketsia, COMMARKAI
 
 **Need-more-information reply**
 > Hi [Name],
@@ -187,7 +184,7 @@ Placeholders used below:
 > Once we have those we can tell you what makes sense and what it would
 > take.
 >
-> [sign-off]
+> Ketsia, COMMARKAI
 
 **Warm decline**
 > Hi [Name],
@@ -199,7 +196,7 @@ Placeholders used below:
 > [Optional: one specific, genuinely useful pointer or direction.]
 >
 > Wishing you the best with it,
-> [sign-off]
+> Ketsia, COMMARKAI
 
 ## Quality checklist
 
@@ -228,14 +225,14 @@ refer it out.
 
 ## Answered 2026-08-29
 
-1. **Calendar:** the Calendly account exists with a branded "Business
-   Discovery Call" (30 min) at
-   `https://calendly.com/commarkai-support/30min`, but it is dormant
-   because its account email is on `commarkai.info`, a domain that
-   lapsed. Ketsia is re-registering `commarkai.info` at Namecheap (also
-   for brand protection), adding `support@commarkai.info` email, and
-   using it to reactivate the account. Do not send the link until the
-   page stops showing "currently unavailable". Tracked in open items.
+1. **Calendar:** RESOLVED 2026-08-29. The Calendly account
+   (`commarkai-support`, branded "Business Discovery Call" 30 min) was
+   dormant because its login email was on the lapsed `commarkai.info`
+   domain. Recovered by re-registering `commarkai.info` at Namecheap,
+   using its free Private Email trial mailbox to catch the reset, then
+   moving the Calendly account email to `support@commarkai.com`. Link is
+   live: `https://calendly.com/commarkai-support/30min`. See the Calendly
+   and commarkai.info rows in `../../tech-stack-log.md`.
 2. **HubSpot stages:** not set up yet. The deal pipeline and stage names
    need configuring. Until then the stage names in this SOP are
    placeholders. Tracked in open items.
@@ -249,22 +246,26 @@ refer it out.
    Below that, offer a paid consult: $500 for a company, $250 for a 30
    minute call with a sole proprietor or solo operator, advice only.
    Now in the rulebook and the decision points above.
-5. **Sign-off:** working default is "Ketsia, COMMARKAI". Change here if
-   Ketsia wants different wording. Body copy stays "we" and "our" per
-   the rulebook.
+5. **Sign-off:** CONFIRMED 2026-08-29, "Ketsia, COMMARKAI". Body copy
+   stays "we" and "our" per the rulebook.
 
 ## Open items this SOP depends on
 
-- [ ] Re-register `commarkai.info` at Namecheap (confirm it is still
-      available first), add `support@commarkai.info` email (forwarding is
-      enough), reset the Calendly login, reactivate the account, then
-      optionally move the Calendly account email to `support@commarkai.com`
-- [ ] Confirm the booking page at
-      `https://calendly.com/commarkai-support/30min` is live again, then
-      remove the "do not send" note from the templates
+- [x] Calendly recovered and link live (2026-08-29)
+- [x] Standard email sign-off confirmed: "Ketsia, COMMARKAI"
 - [ ] Build the HubSpot deal pipeline and stage names, then align step 6
       and the quality checklist to the real names
 - [ ] Build the HubSpot to Brevo sync for hand-created contacts (HubSpot
       native Brevo integration, or a Make.com scenario watching for new
       HubSpot contacts), then drop the manual Brevo add from step 1
-- [ ] Confirm the standard email sign-off (default "Ketsia, COMMARKAI")
+
+## Namecheap housekeeping still to do (not blocking the SOP)
+
+- [ ] Private Email trial for `commarkai.info`: set auto-renew OFF so it
+      lapses Sep 29 2026 with no charge
+- [ ] Domain `commarkai.info`: set auto-renew ON
+- [ ] Click the ICANN / Namecheap contact verification email in
+      `ketsiasln@gmail.com`
+- [ ] Turn on 2FA for the Namecheap account
+- [ ] After Sep 29, remove `support@commarkai.info` from Gmail (it stops
+      working when the trial lapses)

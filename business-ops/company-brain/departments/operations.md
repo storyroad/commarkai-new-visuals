@@ -76,12 +76,12 @@ Use the `sop-builder` skill.
 - Build the HubSpot to Brevo sync for contacts created by hand (HubSpot
   native Brevo integration, or a Make.com scenario on new HubSpot
   contacts). Today only form leads reach Brevo automatically.
-- Recover the Calendly account (`commarkai-support`, "Business Discovery
-  Call" 30 min, currently dormant). Re-register `commarkai.info` at
-  Namecheap, add `support@commarkai.info` email (forwarding is enough),
-  reset the Calendly login, reactivate. Optionally move the Calendly
-  account email to `support@commarkai.com` afterward. Then confirm
-  `https://calendly.com/commarkai-support/30min` is live. See the
-  Calendly and commarkai.info rows in `../../tech-stack-log.md`.
-- Confirm the standard email sign-off on lead replies (default
-  "Ketsia, COMMARKAI").
+- Calendly account recovered 2026-08-29 and moved to
+  `support@commarkai.com`. Link live. Left to do: confirm it is on a free
+  plan (not a lapsed paid one) and the Google Calendar connection is
+  live, then run one test booking.
+- `commarkai.info` re-registered 2026-08-29 at Namecheap. Left to do:
+  Private Email trial auto-renew OFF (lapses Sep 29, no charge), domain
+  auto-renew ON, click the ICANN verification email in
+  `ketsiasln@gmail.com`, turn on Namecheap account 2FA.
+- Standard email sign-off on lead replies: confirmed "Ketsia, COMMARKAI".
