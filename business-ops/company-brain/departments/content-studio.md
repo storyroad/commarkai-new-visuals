@@ -51,6 +51,14 @@ in only if `content-engine` leaves a real gap.
 - Everything else in [../the-rulebook.md](../the-rulebook.md) section 1
   and 2 applies.
 
+## In the pipeline
+
+- **"Building in public" TikTok mini-series** (idea, 2026-08-29). Angle
+  for a tech business on the `#buildinpublic` hashtag: the world is busy
+  and messy, so showing the build now makes sense. Goal is not to teach
+  the how, it is to have viewers want to build alongside COMMARKAI or
+  hire it based on what they see. Follows the style rules below.
+
 ## SOPs to build
 
 Use the `sop-builder` skill.
@@ -58,6 +66,7 @@ Use the `sop-builder` skill.
 - [ ] Weekly LinkedIn series: idea to three scheduled posts
 - [ ] Pillar piece to 8 formats, review, schedule
 - [ ] Monthly competitor ad scan and what to do with it
+- [ ] Building in public TikTok series: cadence, format, hook pattern
 
 ## Boundaries
 
