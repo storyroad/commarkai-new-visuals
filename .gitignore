@@ -20,3 +20,7 @@ Thumbs.db
 
 # Vite cache
 .vite/
+
+# Business docs — real client data, never committed. Only business-ops/invoice_counter.json is tracked.
+business-ops/generated/*
+!business-ops/generated/.gitkeep
