@@ -76,6 +76,12 @@ Use the `sop-builder` skill.
 - Build the HubSpot to Brevo sync for contacts created by hand (HubSpot
   native Brevo integration, or a Make.com scenario on new HubSpot
   contacts). Today only form leads reach Brevo automatically.
-- Get the COMMARKAI Calendly booking link and put it in the inbound lead
-  SOP and its templates.
-- Decide and record the standard email sign-off used on lead replies.
+- Recover the Calendly account (`commarkai-support`, "Business Discovery
+  Call" 30 min, currently dormant). Re-register `commarkai.info` at
+  Namecheap, add `support@commarkai.info` email (forwarding is enough),
+  reset the Calendly login, reactivate. Optionally move the Calendly
+  account email to `support@commarkai.com` afterward. Then confirm
+  `https://calendly.com/commarkai-support/30min` is live. See the
+  Calendly and commarkai.info rows in `../../tech-stack-log.md`.
+- Confirm the standard email sign-off on lead replies (default
+  "Ketsia, COMMARKAI").

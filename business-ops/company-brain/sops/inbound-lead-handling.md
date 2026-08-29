@@ -135,13 +135,15 @@ Brevo list.
 Starting points only. Ketsia writes the final wording.
 
 Placeholders used below:
-- `[link]` is the COMMARKAI Calendly link (paste the real URL once
-  confirmed).
-- `[sign-off]` is the closing line and name at the bottom of the email,
-  for example "Ketsia, COMMARKAI". Set the standard one in the open
-  items section, then use it every time. The rulebook says client copy
-  reads as "we" and "our", so the body stays team voice even though one
-  person signs it.
+- `[link]` is the COMMARKAI discovery-call booking link:
+  `https://calendly.com/commarkai-support/30min`. Note: as of 2026-08-29
+  that Calendly account is dormant and the page shows "currently
+  unavailable". Do not send this link until the account is reactivated
+  (see open items). The event ("Business Discovery Call", 30 min) is
+  already set up and branded.
+- `[sign-off]` is the closing line and name at the bottom of the email.
+  Working default: "Ketsia, COMMARKAI". The rulebook keeps the body in
+  "we" and "our" team voice even though one person signs it.
 
 **Discovery-call reply**
 > Hi [Name],
@@ -226,9 +228,14 @@ refer it out.
 
 ## Answered 2026-08-29
 
-1. **Calendar:** Ketsia has a Calendly account. The real booking URL
-   still needs to be pasted into this SOP and the templates. Tracked in
-   open items.
+1. **Calendar:** the Calendly account exists with a branded "Business
+   Discovery Call" (30 min) at
+   `https://calendly.com/commarkai-support/30min`, but it is dormant
+   because its account email is on `commarkai.info`, a domain that
+   lapsed. Ketsia is re-registering `commarkai.info` at Namecheap (also
+   for brand protection), adding `support@commarkai.info` email, and
+   using it to reactivate the account. Do not send the link until the
+   page stops showing "currently unavailable". Tracked in open items.
 2. **HubSpot stages:** not set up yet. The deal pipeline and stage names
    need configuring. Until then the stage names in this SOP are
    placeholders. Tracked in open items.
@@ -242,18 +249,22 @@ refer it out.
    Below that, offer a paid consult: $500 for a company, $250 for a 30
    minute call with a sole proprietor or solo operator, advice only.
    Now in the rulebook and the decision points above.
-5. **Sign-off:** this was asking what closing name goes at the bottom of
-   the reply emails. Ketsia to pick one standard sign-off (for example
-   "Ketsia, COMMARKAI" or "The COMMARKAI team") and set it in open items,
-   then it is used on every reply. Body copy stays "we" and "our" per
+5. **Sign-off:** working default is "Ketsia, COMMARKAI". Change here if
+   Ketsia wants different wording. Body copy stays "we" and "our" per
    the rulebook.
 
 ## Open items this SOP depends on
 
-- [ ] Paste the real Calendly URL into this file and the templates
+- [ ] Re-register `commarkai.info` at Namecheap (confirm it is still
+      available first), add `support@commarkai.info` email (forwarding is
+      enough), reset the Calendly login, reactivate the account, then
+      optionally move the Calendly account email to `support@commarkai.com`
+- [ ] Confirm the booking page at
+      `https://calendly.com/commarkai-support/30min` is live again, then
+      remove the "do not send" note from the templates
 - [ ] Build the HubSpot deal pipeline and stage names, then align step 6
       and the quality checklist to the real names
 - [ ] Build the HubSpot to Brevo sync for hand-created contacts (HubSpot
       native Brevo integration, or a Make.com scenario watching for new
       HubSpot contacts), then drop the manual Brevo add from step 1
-- [ ] Decide and record the standard email sign-off
+- [ ] Confirm the standard email sign-off (default "Ketsia, COMMARKAI")
