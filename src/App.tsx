@@ -221,7 +221,7 @@ export function App() {
             }}
             className="flex items-center gap-3"
           >
-            <Logo className="w-10 h-10" />
+            <Logo className="w-11 h-11" />
             <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
           </motion.div>
 

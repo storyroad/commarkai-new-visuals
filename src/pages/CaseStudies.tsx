@@ -67,7 +67,7 @@ export default function CaseStudies() {
     <div className="w-full min-h-screen bg-[#f5f3f0]">
       <header className="container mx-auto px-6 py-8 flex justify-between items-center border-b border-gray-200">
         <Link to="/" className="flex items-center gap-3">
-          <Logo className="w-10 h-10" />
+          <Logo className="w-11 h-11" />
           <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
         </Link>
         <Link
