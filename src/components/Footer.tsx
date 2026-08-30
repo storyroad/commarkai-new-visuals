@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <Logo className="w-8 h-8" />
+              <Logo className="w-12 h-12" />
               <span className="text-2xl font-black text-gray-900">COMMARKAI</span>
             </div>
             <p className="text-gray-600 mb-4 max-w-md">
