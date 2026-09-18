@@ -44,7 +44,7 @@ const CaseStudy = ({
         <ul className="space-y-1.5 text-gray-600">
           {deliverables.map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-gray-400">—</span>
+              <span className="text-gray-400">•</span>
               <span>{item}</span>
             </li>
           ))}
@@ -91,7 +91,7 @@ export default function CaseStudies() {
             Real problems, purpose-built solutions
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed">
-            A look at the kind of engagements we take on — the situation a client walked in with,
+            A look at the kind of engagements we take on: the situation a client walked in with,
             what we built, and what changed. Details here are representative rather than
             client-identifying.
           </p>
@@ -103,7 +103,7 @@ export default function CaseStudies() {
             title="Never missing a lead outside business hours"
             need="A growing residential brokerage was generating steady inbound interest through its
               website and social ads, but inquiries that came in evenings or weekends often sat
-              unanswered until the next business day — by which point many prospects had already
+              unanswered until the next business day, by which point many prospects had already
               moved on to another agent."
             deliverables={[
               'A 24/7 AI chat concierge to answer common listing and process questions instantly',
@@ -112,14 +112,14 @@ export default function CaseStudies() {
             ]}
             outcome="Inquiries now get an immediate, useful response no matter when they come in, and
               agents spend their time on leads that are already qualified and ready to move
-              forward — instead of chasing down cold ones the next morning."
+              forward instead of chasing down cold ones the next morning."
           />
 
           <CaseStudy
             eyebrow="Professional Services Firm"
             title="Scaling client intake without scaling headcount"
             need="A regional professional services firm was fielding a growing volume of inbound
-              consultation requests through a manual intake process — phone tag and back-and-forth
+              consultation requests through a manual intake process: phone tag and back-and-forth
               email were slowing down how quickly new clients could get scheduled, and staff time
               was going into logistics instead of client work."
             deliverables={[
@@ -128,7 +128,7 @@ export default function CaseStudies() {
               'CRM integration so every new inquiry appears in the system automatically, with nothing re-entered by hand'
             ]}
             outcome="New clients get scheduled faster and more consistently, and the team reclaimed
-              hours each week that used to go into manual coordination — time now spent on billable
+              hours each week that used to go into manual coordination, time now spent on billable
               client work instead."
           />
         </div>

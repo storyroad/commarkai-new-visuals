@@ -345,7 +345,7 @@ export function App() {
           </motion.div>
         </section>
 
-        {/* Incident Management — links to the SaaS on commarkai.net */}
+        {/* Incident Management: links to the SaaS on commarkai.net */}
         <section className="container mx-auto px-6 pb-12">
           <motion.a
             href="https://commarkai.net"
@@ -371,7 +371,7 @@ export function App() {
               <div className="max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">Break your AI service before your customers do.</h2>
                 <p className="text-lg text-[#CFCAD8]">
-                  Pick a service, throw a failure at it, and watch where it lands — on your customers and on the people who catch what the AI drops. Nothing to connect.
+                  Pick a service, throw a failure at it, and watch where it lands: on your customers and on the people who catch what the AI drops. Nothing to connect.
                 </p>
               </div>
               <span className="inline-block self-start md:self-auto bg-[#FFE500] text-[#17151E] px-8 py-4 rounded-full font-bold text-lg whitespace-nowrap">

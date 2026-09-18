@@ -67,7 +67,7 @@ export default function Services() {
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Services</h1>
           <p className="text-xl text-gray-700 leading-relaxed">
             We design and build AI agents that handle the repetitive, always-on parts of growing a
-            business — so your team spends time on the conversations and decisions that actually
+            business, so your team spends time on the conversations and decisions that actually
             need a person.
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ export default function Services() {
           <ServiceCard
             icon={Bot}
             title="24/7 Lead Generation"
-            description="AI agents that engage every inbound inquiry the moment it arrives, across your website, social channels, and messaging apps — day or night."
+            description="AI agents that engage every inbound inquiry the moment it arrives, across your website, social channels, and messaging apps, day or night."
           />
           <ServiceCard
             icon={Zap}
@@ -86,7 +86,7 @@ export default function Services() {
           <ServiceCard
             icon={TrendingUp}
             title="Conversion Optimization"
-            description="Data-driven refinement of your funnel — messaging, timing, and routing tuned to turn more conversations into booked calls and closed deals."
+            description="Data-driven refinement of your funnel: messaging, timing, and routing tuned to turn more conversations into booked calls and closed deals."
           />
           <ServiceCard
             icon={Workflow}

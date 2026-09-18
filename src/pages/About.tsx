@@ -60,7 +60,7 @@ export default function About() {
             <p>
               CommarkAI was established in 2025 to bring access to information and expertise to a
               broader audience. AI-powered automation had largely been the domain of large
-              companies with dedicated engineering teams and big budgets — everyone else was left
+              companies with dedicated engineering teams and big budgets, and everyone else was left
               working harder, not smarter, to keep up.
             </p>
             <p>
@@ -70,7 +70,7 @@ export default function About() {
               an in-house AI team of their own.
             </p>
             <p>
-              That mission shapes how we work. We don&apos;t just hand over technology — we take
+              That mission shapes how we work. We don&apos;t just hand over technology. We take
               the time to understand what&apos;s actually slowing a business down, and build
               something that fits how that business really operates.
             </p>
@@ -96,7 +96,7 @@ export default function About() {
           <ValueCard
             icon={Compass}
             title="Built around your business"
-            description="An AI agent is only useful if it fits how you actually work — we design around your process, not a template."
+            description="An AI agent is only useful if it fits how you actually work, so we design around your process, not a template."
           />
           <ValueCard
             icon={Sparkles}

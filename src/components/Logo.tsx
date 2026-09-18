@@ -1,4 +1,4 @@
-// The real brand mark (circuit "C", no wordmark baked in — "COMMARKAI" is set
+// The real brand mark (circuit "C", no wordmark baked in; "COMMARKAI" is set
 // separately in type wherever this appears). Source: CommarkaiVectorLogo.svg,
 // cropped to a padded square and stored as public/logo-mark.svg. The favicon
 // (public/favicon.svg) intentionally still uses the older overlapping-squares
