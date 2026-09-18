@@ -626,6 +626,14 @@ export function App() {
                 <label htmlFor="message" className="text-gray-700 font-semibold mb-2">Message *</label>
                 <textarea id="message" name="message" rows={5} required className="border border-gray-300 rounded-lg px-4 py-2"></textarea>
               </div>
+              <label htmlFor="consent" className="flex items-start gap-3 mb-6 text-sm text-gray-700 leading-relaxed cursor-pointer">
+                <input type="checkbox" id="consent" name="consent" value="yes" required className="mt-1 w-4 h-4 flex-none accent-gray-900" />
+                <span>
+                  I agree to the{' '}
+                  <Link to="/terms-of-service" className="underline text-gray-900">Terms of Service</Link> and{' '}
+                  <Link to="/privacy-policy" className="underline text-gray-900">Privacy Policy</Link>, and consent to COMMARKAI contacting me about this request.
+                </span>
+              </label>
               <button type="submit" disabled={submitting} className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors disabled:opacity-60">
                 {submitting ? 'Sending…' : 'Submit'}
               </button>
