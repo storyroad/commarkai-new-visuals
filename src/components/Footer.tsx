@@ -56,6 +56,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-gray-900 mb-4">Services</h4>
             <ul className="space-y-2">
+              <li><a href="https://commarkai.net" className="text-gray-900 font-semibold hover:underline decoration-[#FFE500] decoration-4">AI Incident Simulator</a></li>
               <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Lead Generation</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Automated Follow-ups</Link></li>
               <li><Link to="/services" className="text-gray-600 hover:text-gray-900">Conversion Optimization</Link></li>

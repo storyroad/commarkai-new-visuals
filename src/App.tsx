@@ -225,31 +225,39 @@ export function App() {
             <span className="text-3xl font-black text-gray-900">COMMARKAI</span>
           </motion.div>
 
-          <motion.a
-            initial={{
-              opacity: 0,
-              x: 20
-            }}
-            animate={{
-              opacity: 1,
-              x: 0
-            }}
-            transition={{
-              duration: 0.6
-            }}
-            whileHover={{
-              scale: 1.05
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            className="bg-gray-900 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors shadow-lg"
-            href="https://www.linkedin.com/company/commarkai/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Follow on LinkedIn
-          </motion.a>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://commarkai.net"
+              className="hidden md:inline text-gray-900 font-bold text-lg hover:underline decoration-[#FFE500] decoration-4 transition-colors"
+            >
+              Incident Simulator
+            </a>
+            <motion.a
+              initial={{
+                opacity: 0,
+                x: 20
+              }}
+              animate={{
+                opacity: 1,
+                x: 0
+              }}
+              transition={{
+                duration: 0.6
+              }}
+              whileHover={{
+                scale: 1.05
+              }}
+              whileTap={{
+                scale: 0.95
+              }}
+              className="bg-gray-900 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition-colors shadow-lg"
+              href="https://www.linkedin.com/company/commarkai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow on LinkedIn
+            </motion.a>
+          </div>
         </header>
 
         {/* Hero Section */}
@@ -335,6 +343,42 @@ export function App() {
               <span className="text-gray-900 font-semibold">Multiplies Conversion Rates</span>
             </div>
           </motion.div>
+        </section>
+
+        {/* Incident Management — links to the SaaS on commarkai.net */}
+        <section className="container mx-auto px-6 pb-12">
+          <motion.a
+            href="https://commarkai.net"
+            initial={{
+              opacity: 0,
+              y: 30
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.9
+            }}
+            whileHover={{
+              y: -4
+            }}
+            className="block max-w-5xl mx-auto bg-[#17151E] text-[#F8F6F2] rounded-3xl p-8 md:p-12 shadow-lg"
+          >
+            <p className="text-[#FFE500] font-bold text-sm tracking-wide mb-4">NEW · COMMARKAI INCIDENT MANAGEMENT</p>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div className="max-w-2xl">
+                <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">Break your AI service before your customers do.</h2>
+                <p className="text-lg text-[#CFCAD8]">
+                  Pick a service, throw a failure at it, and watch where it lands — on your customers and on the people who catch what the AI drops. Nothing to connect.
+                </p>
+              </div>
+              <span className="inline-block self-start md:self-auto bg-[#FFE500] text-[#17151E] px-8 py-4 rounded-full font-bold text-lg whitespace-nowrap">
+                Try the simulator →
+              </span>
+            </div>
+          </motion.a>
         </section>
 
         {/* Services Section */}
