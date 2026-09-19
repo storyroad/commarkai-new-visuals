@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Zap, TrendingUp, Facebook, MessageCircle, Send, Calendar, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -142,6 +142,13 @@ const PlatformIcon = ({
 
 export function App() {
   const [submitting, setSubmitting] = useState(false);
+
+  // Opened as /#contact (e.g. from the footer): scroll to the form once the page has rendered.
+  useEffect(() => {
+    if (window.location.hash === '#contact') {
+      setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300);
+    }
+  }, []);
 
   const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -338,14 +345,10 @@ export function App() {
               <Zap className="w-6 h-6 text-purple-500" />
               <span className="text-gray-900 font-semibold">Automated Follow-ups</span>
             </div>
-            <div className="flex items-center gap-3 bg-white px-6 py-3 rounded-full border border-gray-200 shadow-sm">
-              <TrendingUp className="w-6 h-6 text-rose-500" />
-              <span className="text-gray-900 font-semibold">Multiplies Conversion Rates</span>
-            </div>
           </motion.div>
         </section>
 
-        {/* Incident Management: links to the SaaS on commarkai.net */}
+        {/* Incident Simulator: links to the SaaS on commarkai.net */}
         <section className="container mx-auto px-6 pb-12">
           <motion.a
             href="https://commarkai.net"
@@ -366,7 +369,7 @@ export function App() {
             }}
             className="block max-w-5xl mx-auto bg-[#17151E] text-[#F8F6F2] rounded-3xl p-8 md:p-12 shadow-lg"
           >
-            <p className="text-[#FFE500] font-bold text-sm tracking-wide mb-4">NEW · COMMARKAI INCIDENT MANAGEMENT</p>
+            <p className="text-[#FFE500] font-bold text-sm tracking-wide mb-4">NEW · COMMARKAI INCIDENT SIMULATOR</p>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">Break your AI service before your customers do.</h2>
@@ -431,7 +434,7 @@ export function App() {
               <ServiceCard
                 icon={Bot}
                 title="24/7 Lead Generation"
-                description="AI agents continuously identify and engage potential customers across all channels, ensuring no opportunity is missed."
+                description="AI agents respond to incoming enquiries on your channels, day and night, and capture the details your team needs to follow up."
               />
             </motion.div>
 
@@ -479,7 +482,7 @@ export function App() {
               <ServiceCard
                 icon={TrendingUp}
                 title="Conversion Optimization"
-                description="Data-driven AI strategies that multiply your conversion rates and maximize ROI across all marketing channels."
+                description="Test and refine your messaging, timing and follow-up to improve how many enquiries become customers."
               />
             </motion.div>
           </div>
@@ -539,40 +542,9 @@ export function App() {
           </motion.p>
         </section>
 
-        {/* Social Proof */}
-        <section className="container mx-auto px-6 py-20 text-center">
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.6
-            }}
-          >
-            <p className="text-gray-700 text-xl mb-8">AI agents are trusted by a growing number of businesses</p>
-            <div className="flex flex-wrap justify-center gap-12 items-center">
-              <div className="text-center">
-                <div className="text-5xl font-black text-gray-900 mb-2">4.9/5</div>
-                <div className="text-gray-600">Rating</div>
-              </div>
-              <div className="text-center">
-                <div className="text-5xl font-black text-gray-900 mb-2">$2M+</div>
-                <div className="text-gray-600">Revenue Generated</div>
-              </div>
-            </div>
-          </motion.div>
-        </section>
         
         {/* Contact Section */}
-        <section className="container mx-auto px-6 py-20">
+        <section id="contact" className="container mx-auto px-6 py-20 scroll-mt-24">
           <motion.div
             initial={{
               opacity: 0,

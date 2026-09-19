@@ -54,7 +54,7 @@ const CaseStudy = ({
       <div>
         <div className="flex items-center gap-2 mb-3">
           <TrendingUp className="w-5 h-5 text-gray-700" />
-          <h3 className="font-bold text-gray-900">The Outcome</h3>
+          <h3 className="font-bold text-gray-900">The Intended Result</h3>
         </div>
         <p className="text-gray-600 leading-relaxed">{outcome}</p>
       </div>
@@ -86,22 +86,22 @@ export default function CaseStudies() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-16"
         >
-          <p className="text-gray-900 text-xl font-bold mb-4">CASE STUDIES</p>
+          <p className="text-gray-900 text-xl font-bold mb-4">EXAMPLE WORKFLOWS</p>
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-            Real problems, purpose-built solutions
+            Common problems, practical workflows
           </h1>
           <p className="text-xl text-gray-700 leading-relaxed">
-            A look at the kind of engagements we take on: the situation a client walked in with,
-            what we built, and what changed. Details here are representative rather than
-            client-identifying.
+            Illustrative examples of the work we take on: a common situation, the workflow we
+            would build, and the result it is designed to deliver. These are examples, not
+            measured client results.
           </p>
         </motion.div>
 
         <div className="space-y-8 mb-20">
           <CaseStudy
             eyebrow="Real Estate Brokerage"
-            title="Never missing a lead outside business hours"
-            need="A growing residential brokerage was generating steady inbound interest through its
+            title="Responding to enquiries outside business hours"
+            need="A residential brokerage gets steady inbound interest through its
               website and social ads, but inquiries that came in evenings or weekends often sat
               unanswered until the next business day, by which point many prospects had already
               moved on to another agent."
@@ -110,15 +110,14 @@ export default function CaseStudies() {
               'Automated lead qualification to flag serious buyers and sellers for immediate agent follow-up',
               'Direct calendar integration so qualified leads could book a showing without waiting on a callback'
             ]}
-            outcome="Inquiries now get an immediate, useful response no matter when they come in, and
-              agents spend their time on leads that are already qualified and ready to move
-              forward instead of chasing down cold ones the next morning."
+            outcome="Enquiries get a fast, useful first response at any hour, and agents can focus on
+              leads that are ready to move forward instead of chasing cold ones the next morning."
           />
 
           <CaseStudy
             eyebrow="Professional Services Firm"
-            title="Scaling client intake without scaling headcount"
-            need="A regional professional services firm was fielding a growing volume of inbound
+            title="Reducing manual work in client intake"
+            need="A regional professional services firm fields a growing volume of inbound
               consultation requests through a manual intake process: phone tag and back-and-forth
               email were slowing down how quickly new clients could get scheduled, and staff time
               was going into logistics instead of client work."
@@ -127,9 +126,8 @@ export default function CaseStudies() {
               'Automated follow-up sequences that keep prospective clients engaged until a consultation is booked',
               'CRM integration so every new inquiry appears in the system automatically, with nothing re-entered by hand'
             ]}
-            outcome="New clients get scheduled faster and more consistently, and the team reclaimed
-              hours each week that used to go into manual coordination, time now spent on billable
-              client work instead."
+            outcome="New clients can be scheduled faster and more consistently, with less time spent on
+              manual coordination and more left for client work."
           />
         </div>
 
