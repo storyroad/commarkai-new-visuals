@@ -372,9 +372,9 @@ export function App() {
             <p className="text-[#FFE500] font-bold text-sm tracking-wide mb-4">NEW · COMMARKAI INCIDENT SIMULATOR</p>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="max-w-2xl">
-                <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">Break your AI service before your customers do.</h2>
+                <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">What happens when your AI service fails, and how you can fix it.</h2>
                 <p className="text-lg text-[#CFCAD8]">
-                  Pick a service, throw a failure at it, and watch where it lands: on your customers and on the people who catch what the AI drops. Nothing to connect.
+                  Pick a service and a failure, and see where it lands: on your customers and on the people who catch what the AI drops. Nothing to connect.
                 </p>
               </div>
               <span className="inline-block self-start md:self-auto bg-[#FFE500] text-[#17151E] px-8 py-4 rounded-full font-bold text-lg whitespace-nowrap">

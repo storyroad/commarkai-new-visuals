@@ -146,8 +146,8 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-bold text-gray-900">11. Contact Information</h2>
               <p>
                 If you have any questions about these Terms of Service, please contact us via email at{' '}
-                <a href="mailto:support@commarkai.info" className="text-indigo-600 hover:underline">
-                  support@commarkai.info
+                <a href="mailto:support@commarkai.com" className="text-indigo-600 hover:underline">
+                  support@commarkai.com
                 </a>
                 , or through our website contact form.
               </p>
