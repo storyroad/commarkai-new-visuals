@@ -374,7 +374,7 @@ export function App() {
               <div className="max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4">What happens when your AI service fails, and how you can fix it.</h2>
                 <p className="text-lg text-[#CFCAD8]">
-                  Pick a service and a failure, and see where it lands: on your customers and on the people who catch what the AI drops. Nothing to connect.
+                  Pick a service and a failure, then see what could be prevented, all in a simulated environment.
                 </p>
               </div>
               <span className="inline-block self-start md:self-auto bg-[#FFE500] text-[#17151E] px-8 py-4 rounded-full font-bold text-lg whitespace-nowrap">
