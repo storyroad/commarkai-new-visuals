@@ -234,6 +234,12 @@ export function App() {
 
           <div className="flex items-center gap-6">
             <a
+              href="https://b2b.commarkai.com"
+              className="hidden md:inline text-gray-900 font-bold text-lg hover:underline decoration-[#FFE500] decoration-4 transition-colors"
+            >
+              For Businesses
+            </a>
+            <a
               href="https://commarkai.net"
               className="hidden md:inline text-gray-900 font-bold text-lg hover:underline decoration-[#FFE500] decoration-4 transition-colors"
             >
